@@ -17,3 +17,21 @@ def add_list_plusop(subj_list:list, arg_list:list) -> list:
     '''Add list using + op'''
     subj_list = subj_list + arg_list
     return subj_list
+
+def list_count(subj_list:list, val:any) -> int:
+    ''''Count # of occurence of `val`'''
+    return subj_list.count(val)
+
+def has_val(subj_list:list, val:any) -> bool:
+    '''
+    Return true if the `subj_list` has the val
+    OW return false
+    '''
+    return val in subj_list
+
+def get_idx(subj_list:list, val:any) -> int:
+    '''
+    Return the first occurence `val`'s idx position
+    CAUTION: it raises ValueError if not exist
+    '''
+    return subj_list.index(val)
