@@ -34,3 +34,15 @@ def test_remove_list() -> None:
         assert True
     else:
         assert False
+
+def test_pop_list() -> None:
+    subj_list:list = [1,2,3]
+    assert subj_list.pop() == 3
+    assert subj_list.pop(0) == 1
+    assert subj_list.pop(0) == 2
+    try:
+        subj_list.pop()
+    except IndexError:
+        assert True
+    else:
+        assert False
