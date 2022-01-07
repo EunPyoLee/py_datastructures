@@ -35,3 +35,10 @@ def get_idx(subj_list:list, val:any) -> int:
     CAUTION: it raises ValueError if not exist
     '''
     return subj_list.index(val)
+
+def remove_val(subj_list:list, val:any) -> None:
+    '''
+    Remove first occuring `val` from the `subj_list`
+    CAUTION: removing non-existing `val` will raise ValueError
+    '''
+    subj_list.remove(val)

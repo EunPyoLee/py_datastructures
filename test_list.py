@@ -23,3 +23,14 @@ def test_count_list() -> None:
     else:
         assert False
     assert list.has_val(subj_list, 'hi') == True
+
+def test_remove_list() -> None:
+    subj_list:list = [1,2,3,1]
+    list.remove_val(subj_list, 1)
+    assert subj_list == [2,3,1]
+    try:
+        list.remove_val(subj_list, 4)
+    except ValueError:
+        assert True
+    else:
+        assert False
