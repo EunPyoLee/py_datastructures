@@ -46,3 +46,13 @@ def test_pop_list() -> None:
         assert True
     else:
         assert False
+
+def test_list_boolean_context() -> None:
+    if not []:
+        assert True
+    else:
+        assert False
+    if [1]:
+        assert True
+    else:
+        assert False
